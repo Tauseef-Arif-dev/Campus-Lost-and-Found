@@ -1,0 +1,273 @@
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    flex-wrap: wrap;
+}
+
+.navbar h2 {
+    color: #2563eb;
+    font-size: 28px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #334155;
+    font-weight: bold;
+}
+
+.navbar nav a:hover {
+    color: #2563eb;
+}
+
+/* Main Content */
+main {
+    width: 90%;
+    max-width: 1500px;
+    margin: 30px auto;
+}
+
+/* Welcome Section */
+.welcome {
+    background: linear-gradient(120deg, #2563eb, #1e40af);
+    color: white;
+    padding: 85px 25px;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.welcome h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.welcome p {
+    font-size: 20px;
+}
+
+/* Dashboard Statistics */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border-bottom: 3px solid #2563eb;
+}
+
+.stat-card h3 {
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+.stat-card p {
+    font-size: 38px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+/* Report Form Section */
+.report-section,
+.items-section {
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+
+.report-section h2,
+.items-section h2 {
+    color: #1e40af;
+    margin-bottom: 25px;
+}
+
+/* Form */
+#itemForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#itemForm label {
+    font-weight: bold;
+    color: #475569;
+    margin-top: 5px;
+}
+
+#itemForm input,
+#itemForm select,
+#itemForm textarea,
+.search-area input,
+.search-area select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #dbe3ef;
+    border-radius: 9px;
+    font-size: 16px;
+    outline: none;
+}
+
+#itemForm input:focus,
+#itemForm select:focus,
+#itemForm textarea:focus {
+    border-color: #2563eb;
+}
+
+#itemForm textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+/* Buttons */
+#itemForm button {
+    background: #2563eb;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 9px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#itemForm button:hover {
+    background: #1d4ed8;
+}
+
+/* Search and Filter */
+.search-area {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.search-area input {
+    flex: 2;
+}
+
+.search-area select {
+    flex: 1;
+}
+
+/* Items Container */
+#itemsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.item-card {
+    background: #f8fafc;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.item-card h3 {
+    color: #1e40af;
+    margin-bottom: 10px;
+}
+
+.item-card p {
+    margin-bottom: 8px;
+    overflow-wrap: anywhere;
+}
+
+#emptyMessage {
+    color: #64748b;
+    text-align: center;
+    padding: 25px;
+    grid-column: 1 / -1;
+}
+
+/* Footer */
+footer {
+    background: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #itemsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .welcome h1 {
+        font-size: 30px;
+    }
+
+    .search-area {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard,
+    #itemsContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .report-section,
+    .items-section {
+        padding: 20px;
+    }
+
+    .welcome {
+        padding: 50px 15px;
+    }
+}

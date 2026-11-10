@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Lost & Found</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <h2>Campus Lost & Found</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#report">Report Item</a>
+            <a href="#items">Browse Items</a>
+        </nav>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main id="home">
+
+        <section class="welcome">
+            <h1>Lost Something on Campus?</h1>
+            <p>
+                Find your lost belongings or help someone
+                recover their missing items.
+            </p>
+        </section>
+
+        <!-- Statistics -->
+        <section class="dashboard">
+
+            <div class="stat-card">
+                <h3>Total Items</h3>
+                <p id="totalItems">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Lost Items</h3>
+                <p id="lostItems">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Found Items</h3>
+                <p id="foundItems">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Resolved</h3>
+                <p id="resolvedItems">0</p>
+            </div>
+
+        </section>
+
+        <!-- Report Item Form -->
+        <section id="report" class="report-section">
+
+            <h2>Report a Lost or Found Item</h2>
+
+            <form id="itemForm">
+
+                <label for="itemType">Report Type</label>
+                <select id="itemType" required>
+                    <option value="">Select Type</option>
+                    <option value="Lost">Lost Item</option>
+                    <option value="Found">Found Item</option>
+                </select>
+
+                <label for="itemName">Item Name</label>
+                <input
+                    type="text"
+                    id="itemName"
+                    placeholder="e.g. Black Wallet"
+                    required
+                >
+
+                <label for="category">Category</label>
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Documents">Documents</option>
+                    <option value="Bags">Bags</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="location">Campus Location</label>
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="e.g. Library"
+                    required
+                >
+
+                <label for="contact">Contact Information</label>
+                <input
+                    type="text"
+                    id="contact"
+                    placeholder="Email or phone number"
+                    required
+                >
+
+                <label for="description">Description</label>
+                <textarea
+                    id="description"
+                    placeholder="Describe the item..."
+                    required
+                ></textarea>
+
+                <button type="submit">Submit Report</button>
+
+            </form>
+
+        </section>
+
+        <!-- Browse Items -->
+        <section id="items" class="items-section">
+
+            <h2>Browse Reported Items</h2>
+
+            <div class="search-area">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for an item..."
+                >
+
+                <select id="filterType">
+                    <option value="All">All Items</option>
+                    <option value="Lost">Lost Items</option>
+                    <option value="Found">Found Items</option>
+                </select>
+
+            </div>
+
+            <div id="itemsContainer">
+                <p id="emptyMessage">
+                    No items reported yet.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Campus Lost & Found | University Project</p>
+        <p>Helping students find what matters.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
